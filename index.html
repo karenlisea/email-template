@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--bootstrap CDN CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <!--my CSS-->
+  <link href="styles.css" rel="stylesheet">
+  <title>Bootstrap Email Template</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!--Navbar taken from getbootstrap.com-->
+      <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="https://i.etsystatic.com/25839518/r/il/83d7e0/3102291667/il_1588xN.3102291667_5hvp.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            Welcome back Kate!
+          </a>
+        </div>
+        <!-- search bar(Navbar) taken from getbootstrap.com-->
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </nav>
+    </div>
+
+
+    
+
+    <!--Body of email-->
+    <div class="row w-100">
+
+      <div class="col-sm-12 col-md-3 col-lg-2 first-col">
+
+        <!--Responsive offcanvas from getbootstrap.com-->
+
+        <button class="btn btn-primary d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive"><img src="menu-burger-icon.png" alt="buttonBurgerMenu" class="buttonBurgerMenu"/></button>
+    
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
+
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">Hello Kate!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
+          </div>
+
+          <div class="offcanvas-body">
+
+            <!--List group(For links and buttons) from getbootstrap.com-->
+            <div class="list-group d-flex w-100 justify-content-between">
+              <a href="#" class="list-group-item list-group-item-action">Inbox</a>
+              <a href="#" class="list-group-item list-group-item-action">Sent</a>
+              <a href="#" class="list-group-item list-group-item-action">Draft</a>
+              <a href="#" class="list-group-item list-group-item-action">Trash</a>
+              <a href="#" class="list-group-item list-group-item-action">Favorite</a>
+
+            </div>
+          </div>
+        </div>
+
+        <!--source: modal taken from getbootstrap.com to create email message starts here-->
+
+        <!-- Button trigger modal -->
+
+        <br><br>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Compose
+        </button>
+        <br><br>
+
+         <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div>
+                  <label for="Recipient">Recipient:</label><br>
+                  <input type="text" id="fname" name="Recipient" class="msg-box"><br><br>
+                  <label for="Subject">Subject:</label><br>
+                  <input type="text" id="Subject" name="Subject" class="msg-box"><br><br>
+                  <label for="Message">Message:</label><br>
+                </div>
+                <!--textarea taken from getbootstrap.com begins here-->
+                <div class="form-floating">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                </div>
+                <!--textarea taken from getbootstrap.com ends here-->
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-primary">Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!--source: modal taken from getbootstrap.com to create email message ends here-->
+      
+      </div>
+      
+      
+      
+      <div class="col-sm-12 col-md-9 col-lg-4 second-col">
+        <!--add Custom content (list group) from getbootstrap.com-->
+        <div class="list-group">
+          <a href="#" class="list-group-item" aria-current="true">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Zillow</h5>
+              <small>9:08AM</small>
+            </div>
+            <p class="mb-1">98296 Market Report</p>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Temu</h5>
+              <small class="text-muted">8:25AM</small>
+            </div>
+            <p class="mb-1">Amazing Deals.</p>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">NYT Cooking</h5>
+              <small class="text-muted">8:00AM</small>
+            </div>
+            <p class="mb-1">Everone is saving this recipe.</p>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Figma</h5>
+              <small class="text-muted">7:00AM</small>
+            </div>
+            <p class="mb-1">Add magic to your files.</p>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Miro</h5>
+              <small class="text-muted">6:00AM</small>
+            </div>
+            <p class="mb-1">New highlights on the Flexbox.</p>
+          </a>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-6 third-col">
+
+        <h3>98296 Market Report</h3>
+        <p> From: Zillow </p>
+        <p>The 98296 housing market is somewhat competitive. Homes in 98296 receive 2 offers on average and sell in around 32 days. The average sale price of a home in 98296 was $795K last month, down 31.8% since last year. The average sale price per square foot in 98296 is $397, down 15.5% since last year.</p>
+
+        <!-- Text area taken from getbootstrap.com-->
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+          <label for="floatingTextarea2">Reply</label>
+        </div>
+        <div class="input-group">
+          <div class="input-group-text" id="btnGroupAddon2">@</div>
+          <input type="text" class="form-control" placeholder="" aria-label="Input group example" aria-describedby="btnGroupAddon2">
+        </div>
+        <!-- Button group taken from getbootstrap.com-->
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-primary ms-5">Reply</button>
+          <button type="button" class="btn btn-primary">Forward</button>
+          <button type="button" class="btn btn-primary">Delete</button>
+          <button type="button" class="btn btn-primary">Favorite</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--bootstrap CDN Javascript-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+
+</html>
