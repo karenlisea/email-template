@@ -14,16 +14,49 @@
 
 <body>
   <div class="container-fluid">
+
     <div class="row">
       <!--Navbar taken from getbootstrap.com-->
       <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
+          <!--Navbar brand from getbootstrap.com-->
           <a class="navbar-brand" href="#">
             <img src="https://i.etsystatic.com/25839518/r/il/83d7e0/3102291667/il_1588xN.3102291667_5hvp.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
             Welcome back Kate!
           </a>
+
+          <!--Offcanvas navbar under navbar from getbootstrap.com to create sidebar used for user sign out and manage account-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Hello Kate!</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Sign out</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Change profile</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Manage account
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Privacy policy</a></li>
+                    <li><a class="dropdown-item" href="#">Terms of service</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <!-- search bar(Navbar) taken from getbootstrap.com-->
+
+        <!-- Forms (Navbar) taken from getbootstrap.com-->
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
@@ -39,7 +72,7 @@
 
       <div class="col-sm-12 col-md-3 col-lg-2 first-col">
 
-        <!--Responsive offcanvas from getbootstrap.com-->
+        <!--Responsive (offcanvas) from getbootstrap.com used to show menu(inbox, sent, draft etc)-->
 
         <button class="btn btn-primary d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive"><img src="menu-burger-icon.png" alt="buttonBurgerMenu" class="buttonBurgerMenu"/></button>
     
@@ -64,7 +97,7 @@
           </div>
         </div>
 
-        <!--source: modal taken from getbootstrap.com to create email message starts here-->
+        <!--modal taken from getbootstrap.com to create email message starts here-->
 
         <!-- Button trigger modal -->
 
@@ -74,7 +107,7 @@
         </button>
         <br><br>
 
-         <!-- Modal -->
+         <!-- Modal (component)-->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -90,11 +123,10 @@
                   <input type="text" id="Subject" name="Subject" class="msg-box"><br><br>
                   <label for="Message">Message:</label><br>
                 </div>
-                <!--textarea taken from getbootstrap.com begins here-->
+                <!--textarea taken from getbootstrap.com-->
                 <div class="form-floating">
                   <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
                 </div>
-                <!--textarea taken from getbootstrap.com ends here-->
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -151,17 +183,20 @@
           </a>
         </div>
       </div>
+      
+      
       <div class="col-sm-12 col-md-12 col-lg-6 third-col">
 
         <h3>98296 Market Report</h3>
         <p> From: Zillow </p>
         <p>The 98296 housing market is somewhat competitive. Homes in 98296 receive 2 offers on average and sell in around 32 days. The average sale price of a home in 98296 was $795K last month, down 31.8% since last year. The average sale price per square foot in 98296 is $397, down 15.5% since last year.</p>
 
-        <!-- Text area taken from getbootstrap.com-->
+        <!-- Text area (floating labels)taken from getbootstrap.com-->
         <div class="form-floating">
           <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
           <label for="floatingTextarea2">Reply</label>
         </div>
+        <!-- Input groups (floating labels)taken from getbootstrap.com-->
         <div class="input-group">
           <div class="input-group-text" id="btnGroupAddon2">@</div>
           <input type="text" class="form-control" placeholder="" aria-label="Input group example" aria-describedby="btnGroupAddon2">
@@ -174,6 +209,7 @@
           <button type="button" class="btn btn-primary">Favorite</button>
         </div>
       </div>
+
     </div>
   </div>
   <!--bootstrap CDN Javascript-->
